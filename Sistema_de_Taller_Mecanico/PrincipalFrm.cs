@@ -30,5 +30,12 @@ namespace Sistema_de_Taller_Mecanico
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            MarcasFrm frm = new MarcasFrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
