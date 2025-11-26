@@ -40,7 +40,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -63,7 +63,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.comboBox2);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker1);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox3);
+            this.splitContainer1.Panel1.Controls.Add(this.txtTelefono);
             this.splitContainer1.Panel1.Controls.Add(this.txtApellidos);
             this.splitContainer1.Panel1.Controls.Add(this.txtNombres);
             this.splitContainer1.Panel1.Controls.Add(this.btnEliminar);
@@ -183,12 +183,12 @@
             this.txtApellidos.Size = new System.Drawing.Size(222, 20);
             this.txtApellidos.TabIndex = 10;
             // 
-            // textBox3
+            // txtTelefono
             // 
-            this.textBox3.Location = new System.Drawing.Point(28, 156);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 20);
-            this.textBox3.TabIndex = 11;
+            this.txtTelefono.Location = new System.Drawing.Point(28, 156);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(222, 20);
+            this.txtTelefono.TabIndex = 11;
             // 
             // dateTimePicker1
             // 
@@ -261,7 +261,7 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Button btnEliminar;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sistema_de_Taller_Mecanico
 {
-    public partial class MarcasFrm : Form
+    public partial class Mecanicos_Oden : Form
     {
-        public MarcasFrm()
+        public Mecanicos_Oden()
         {
             InitializeComponent();
         }

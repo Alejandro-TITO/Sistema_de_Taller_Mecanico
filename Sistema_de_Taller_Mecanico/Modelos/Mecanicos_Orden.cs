@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_Taller_Mecanico.Modelos
 {
-    internal class Marcas
+    internal class Mecanicos_Orden
     {
     }
 }
