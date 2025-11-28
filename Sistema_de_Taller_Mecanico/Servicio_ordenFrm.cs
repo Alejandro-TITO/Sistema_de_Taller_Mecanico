@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Sistema_de_Taller_Mecanico
 {
-    public partial class VehiculosFrm : Form
+    public partial class Servicio_ordenFrm : Form
     {
-        public VehiculosFrm()
+        public Servicio_ordenFrm()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

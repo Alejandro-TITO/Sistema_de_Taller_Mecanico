@@ -101,6 +101,7 @@
             this.btnRepuestos.Name = "btnRepuestos";
             this.btnRepuestos.Size = new System.Drawing.Size(81, 22);
             this.btnRepuestos.Text = "Repuestos";
+            this.btnRepuestos.Click += new System.EventHandler(this.btnRepuestos_Click);
             // 
             // btnOrdenes
             // 
@@ -125,6 +126,7 @@
             this.btnRepuesto_O.Name = "btnRepuesto_O";
             this.btnRepuesto_O.Size = new System.Drawing.Size(112, 22);
             this.btnRepuesto_O.Text = "Repuesto Orden";
+            this.btnRepuesto_O.Click += new System.EventHandler(this.btnRepuesto_O_Click);
             // 
             // toolStripButton5
             // 

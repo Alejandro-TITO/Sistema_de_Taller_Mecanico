@@ -53,16 +53,19 @@
       <DependentUpon>ClientesFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
-    <Compile Include="MarcasFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MarcasFrm.Designer.cs">
-      <DependentUpon>MarcasFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modelos\Clientes.cs" />
     <Compile Include="Modelos\Marcas.cs" />
+    <Compile Include="Modelos\Ordene.cs" />
     <Compile Include="Modelos\Repuestos.cs" />
+    <Compile Include="Modelos\Servicio.cs" />
+    <Compile Include="Modelos\Servicio_orden.cs" />
     <Compile Include="Modelos\Vehiculo.cs" />
+    <Compile Include="OrdenesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesFrm.Designer.cs">
+      <DependentUpon>OrdenesFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrincipalFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +80,18 @@
     <Compile Include="RepuestoFrm.Designer.cs">
       <DependentUpon>RepuestoFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServiciosFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiciosFrm.Designer.cs">
+      <DependentUpon>ServiciosFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servicio_ordenFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servicio_ordenFrm.Designer.cs">
+      <DependentUpon>Servicio_ordenFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="VehiculosFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +100,9 @@
     </Compile>
     <EmbeddedResource Include="ClientesFrm.resx">
       <DependentUpon>ClientesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesFrm.resx">
+      <DependentUpon>OrdenesFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalFrm.resx">
       <DependentUpon>PrincipalFrm.cs</DependentUpon>
@@ -100,6 +118,12 @@
     </Compile>
     <EmbeddedResource Include="RepuestoFrm.resx">
       <DependentUpon>RepuestoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiciosFrm.resx">
+      <DependentUpon>ServiciosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servicio_ordenFrm.resx">
+      <DependentUpon>Servicio_ordenFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VehiculosFrm.resx">
       <DependentUpon>VehiculosFrm.cs</DependentUpon>

@@ -33,9 +33,17 @@ namespace Sistema_de_Taller_Mecanico
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            MarcasFrm frm = new MarcasFrm();
-            frm.MdiParent = this;
-            frm.Show();
+            
+        }
+
+        private void btnRepuestos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRepuesto_O_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
