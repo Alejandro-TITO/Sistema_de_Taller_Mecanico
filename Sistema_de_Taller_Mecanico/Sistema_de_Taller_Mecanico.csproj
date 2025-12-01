@@ -84,9 +84,15 @@
       <DependentUpon>MecanicosFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Clientes.cs" />
+    <Compile Include="Modelos\Evidencia.cs" />
+    <Compile Include="Modelos\Garantia.cs" />
     <Compile Include="Modelos\Marcas.cs" />
+    <Compile Include="Modelos\Mecanico.cs" />
+    <Compile Include="Modelos\Mecanico_Orden.cs" />
     <Compile Include="Modelos\Ordene.cs" />
+    <Compile Include="Modelos\Reclamo_Garantia.cs" />
     <Compile Include="Modelos\Repuestos.cs" />
+    <Compile Include="Modelos\Repuesto_Orden.cs" />
     <Compile Include="Modelos\Servicio.cs" />
     <Compile Include="Modelos\Servicio_orden.cs" />
     <Compile Include="Modelos\Vehiculo.cs" />

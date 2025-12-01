@@ -82,7 +82,7 @@ namespace Sistema_de_Taller_Mecanico
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            MarcasFrm frm = new MarcasFrm();
+            MecanicosFrm frm = new MecanicosFrm();
             frm.MdiParent = this;
             frm.Show();
         }
