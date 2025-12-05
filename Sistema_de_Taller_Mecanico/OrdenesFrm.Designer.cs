@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtVehiculo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtFechaI = new System.Windows.Forms.DateTimePicker();
             this.txtFechaE = new System.Windows.Forms.DateTimePicker();
             this.txtPrecioE = new System.Windows.Forms.TextBox();
@@ -51,8 +53,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtVehiculo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -95,9 +95,25 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 588);
-            this.splitContainer1.SplitterDistance = 266;
+            this.splitContainer1.Size = new System.Drawing.Size(1314, 588);
+            this.splitContainer1.SplitterDistance = 255;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // txtVehiculo
+            // 
+            this.txtVehiculo.Location = new System.Drawing.Point(27, 429);
+            this.txtVehiculo.Name = "txtVehiculo";
+            this.txtVehiculo.Size = new System.Drawing.Size(143, 20);
+            this.txtVehiculo.TabIndex = 35;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(24, 412);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 13);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Vehiculo";
             // 
             // txtFechaI
             // 
@@ -254,6 +270,7 @@
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -264,6 +281,7 @@
             this.btnEditar.TabIndex = 13;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -274,6 +292,7 @@
             this.btnGuardar.TabIndex = 12;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dataGridView1
             // 
@@ -284,33 +303,18 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(530, 588);
+            this.dataGridView1.Size = new System.Drawing.Size(1055, 588);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // txtVehiculo
-            // 
-            this.txtVehiculo.Location = new System.Drawing.Point(27, 429);
-            this.txtVehiculo.Name = "txtVehiculo";
-            this.txtVehiculo.Size = new System.Drawing.Size(143, 20);
-            this.txtVehiculo.TabIndex = 35;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 412);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 13);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Vehiculo";
             // 
             // OrdenesFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 588);
+            this.ClientSize = new System.Drawing.Size(1314, 588);
             this.Controls.Add(this.splitContainer1);
             this.Name = "OrdenesFrm";
             this.Text = "OrdenesFrm";
+            this.Load += new System.EventHandler(this.OrdenesFrm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
