@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgdatos = new System.Windows.Forms.DataGridView();
-            this.txtFechaRegistro = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -82,6 +82,15 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // txtFechaRegistro
+            // 
+            this.txtFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFechaRegistro.Location = new System.Drawing.Point(27, 290);
+            this.txtFechaRegistro.Name = "txtFechaRegistro";
+            this.txtFechaRegistro.Size = new System.Drawing.Size(223, 20);
+            this.txtFechaRegistro.TabIndex = 15;
+            this.txtFechaRegistro.ValueChanged += new System.EventHandler(this.txtFechaRegistro_ValueChanged);
             // 
             // txtCorreo
             // 
@@ -228,14 +237,6 @@
             this.dgdatos.Size = new System.Drawing.Size(530, 450);
             this.dgdatos.TabIndex = 0;
             // 
-            // txtFechaRegistro
-            // 
-            this.txtFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtFechaRegistro.Location = new System.Drawing.Point(27, 290);
-            this.txtFechaRegistro.Name = "txtFechaRegistro";
-            this.txtFechaRegistro.Size = new System.Drawing.Size(223, 20);
-            this.txtFechaRegistro.TabIndex = 15;
-            // 
             // ClientesFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +245,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "ClientesFrm";
             this.Text = "ClientesFrm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ClientesFrm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();

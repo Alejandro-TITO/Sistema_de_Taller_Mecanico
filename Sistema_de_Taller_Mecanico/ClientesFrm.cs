@@ -102,5 +102,10 @@ namespace Sistema_de_Taller_Mecanico
             }
 
         }
+
+        private void txtFechaRegistro_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

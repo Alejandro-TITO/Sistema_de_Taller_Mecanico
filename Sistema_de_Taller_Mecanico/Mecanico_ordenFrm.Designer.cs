@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtMecanico = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtOrden = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtHoras = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtFechaF = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtFechaI = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtOrden = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtMecanico = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,11 +65,11 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnEliminar);
             this.splitContainer1.Panel1.Controls.Add(this.btnEditar);
             this.splitContainer1.Panel1.Controls.Add(this.btnGuardar);
-            this.splitContainer1.Panel1.Controls.Add(this.txtDescripcion);
+            this.splitContainer1.Panel1.Controls.Add(this.txtHoras);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker2);
+            this.splitContainer1.Panel1.Controls.Add(this.txtFechaF);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker1);
+            this.splitContainer1.Panel1.Controls.Add(this.txtFechaI);
             this.splitContainer1.Panel1.Controls.Add(this.label6);
             // 
             // splitContainer1.Panel2
@@ -79,6 +79,38 @@
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
             // 
+            // txtMecanico
+            // 
+            this.txtMecanico.Location = new System.Drawing.Point(38, 325);
+            this.txtMecanico.Name = "txtMecanico";
+            this.txtMecanico.Size = new System.Drawing.Size(143, 20);
+            this.txtMecanico.TabIndex = 34;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(35, 308);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Mecanico";
+            // 
+            // txtOrden
+            // 
+            this.txtOrden.Location = new System.Drawing.Point(34, 264);
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(143, 20);
+            this.txtOrden.TabIndex = 30;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 247);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Orden";
+            // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(93, 410);
@@ -87,6 +119,7 @@
             this.btnEliminar.TabIndex = 32;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -96,6 +129,7 @@
             this.btnEditar.TabIndex = 31;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -105,14 +139,15 @@
             this.btnGuardar.TabIndex = 30;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtDescripcion
+            // txtHoras
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(30, 185);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(208, 52);
-            this.txtDescripcion.TabIndex = 29;
+            this.txtHoras.Location = new System.Drawing.Point(30, 185);
+            this.txtHoras.Multiline = true;
+            this.txtHoras.Name = "txtHoras";
+            this.txtHoras.Size = new System.Drawing.Size(208, 52);
+            this.txtHoras.TabIndex = 29;
             // 
             // label2
             // 
@@ -123,13 +158,13 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Horas de trabajo";
             // 
-            // dateTimePicker2
+            // txtFechaF
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(34, 110);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker2.TabIndex = 27;
+            this.txtFechaF.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFechaF.Location = new System.Drawing.Point(34, 110);
+            this.txtFechaF.Name = "txtFechaF";
+            this.txtFechaF.Size = new System.Drawing.Size(100, 20);
+            this.txtFechaF.TabIndex = 27;
             // 
             // label1
             // 
@@ -140,13 +175,13 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "fecha de fin";
             // 
-            // dateTimePicker1
+            // txtFechaI
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(30, 57);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 25;
+            this.txtFechaI.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFechaI.Location = new System.Drawing.Point(30, 57);
+            this.txtFechaI.Name = "txtFechaI";
+            this.txtFechaI.Size = new System.Drawing.Size(100, 20);
+            this.txtFechaI.TabIndex = 25;
             // 
             // label6
             // 
@@ -169,38 +204,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(530, 450);
             this.dataGridView1.TabIndex = 0;
             // 
-            // txtOrden
-            // 
-            this.txtOrden.Location = new System.Drawing.Point(34, 264);
-            this.txtOrden.Name = "txtOrden";
-            this.txtOrden.Size = new System.Drawing.Size(143, 20);
-            this.txtOrden.TabIndex = 30;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 247);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Orden";
-            // 
-            // txtMecanico
-            // 
-            this.txtMecanico.Location = new System.Drawing.Point(38, 325);
-            this.txtMecanico.Name = "txtMecanico";
-            this.txtMecanico.Size = new System.Drawing.Size(143, 20);
-            this.txtMecanico.TabIndex = 34;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 308);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Mecanico";
-            // 
             // Mecanico_ordenFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +212,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Mecanico_ordenFrm";
             this.Text = "Mecanico_ordenFrm";
+            this.Load += new System.EventHandler(this.Mecanico_ordenFrm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -223,11 +227,11 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker txtFechaF;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txtFechaI;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtHoras;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
