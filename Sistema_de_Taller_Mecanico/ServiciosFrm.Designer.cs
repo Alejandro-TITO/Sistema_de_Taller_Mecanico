@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtipoSer = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtActivo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtTiempoEst = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPrecioS = new System.Windows.Forms.TextBox();
@@ -47,11 +43,19 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gruTipoServ = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.gruActivo = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gruTipoServ.SuspendLayout();
+            this.gruActivo.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -62,10 +66,8 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.txtipoSer);
-            this.splitContainer1.Panel1.Controls.Add(this.label7);
-            this.splitContainer1.Panel1.Controls.Add(this.txtActivo);
-            this.splitContainer1.Panel1.Controls.Add(this.label6);
+            this.splitContainer1.Panel1.Controls.Add(this.gruActivo);
+            this.splitContainer1.Panel1.Controls.Add(this.gruTipoServ);
             this.splitContainer1.Panel1.Controls.Add(this.txtTiempoEst);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.txtPrecioS);
@@ -83,45 +85,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
+            this.splitContainer1.Size = new System.Drawing.Size(800, 475);
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // txtipoSer
-            // 
-            this.txtipoSer.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtipoSer.Location = new System.Drawing.Point(15, 322);
-            this.txtipoSer.Name = "txtipoSer";
-            this.txtipoSer.Size = new System.Drawing.Size(236, 24);
-            this.txtipoSer.TabIndex = 26;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 293);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 16);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Tipo de servicio";
-            // 
-            // txtActivo
-            // 
-            this.txtActivo.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtActivo.Location = new System.Drawing.Point(15, 266);
-            this.txtActivo.Name = "txtActivo";
-            this.txtActivo.Size = new System.Drawing.Size(100, 24);
-            this.txtActivo.TabIndex = 24;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 247);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 16);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Activo";
             // 
             // txtTiempoEst
             // 
@@ -216,32 +182,35 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(89, 405);
+            this.btnEliminar.Location = new System.Drawing.Point(86, 426);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(124, 33);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(141, 352);
+            this.btnEditar.Location = new System.Drawing.Point(138, 373);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(110, 47);
             this.btnEditar.TabIndex = 11;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(15, 352);
+            this.btnGuardar.Location = new System.Drawing.Point(12, 373);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(120, 47);
             this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dataGridView1
             // 
@@ -252,23 +221,94 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(530, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(530, 475);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // gruTipoServ
+            // 
+            this.gruTipoServ.Controls.Add(this.radioButton2);
+            this.gruTipoServ.Controls.Add(this.radioButton1);
+            this.gruTipoServ.Location = new System.Drawing.Point(12, 306);
+            this.gruTipoServ.Name = "gruTipoServ";
+            this.gruTipoServ.Size = new System.Drawing.Size(236, 50);
+            this.gruTipoServ.TabIndex = 25;
+            this.gruTipoServ.TabStop = false;
+            this.gruTipoServ.Text = "Tipo  de Servicio";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 20);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(67, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Estandar";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(107, 19);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(91, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Personalizado";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(107, 19);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(41, 17);
+            this.radioButton3.TabIndex = 1;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "NO";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(7, 20);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(35, 17);
+            this.radioButton4.TabIndex = 0;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "SI";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // gruActivo
+            // 
+            this.gruActivo.Controls.Add(this.radioButton3);
+            this.gruActivo.Controls.Add(this.radioButton4);
+            this.gruActivo.Location = new System.Drawing.Point(12, 250);
+            this.gruActivo.Name = "gruActivo";
+            this.gruActivo.Size = new System.Drawing.Size(166, 50);
+            this.gruActivo.TabIndex = 26;
+            this.gruActivo.TabStop = false;
+            this.gruActivo.Text = "Activo";
             // 
             // ServiciosFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 475);
             this.Controls.Add(this.splitContainer1);
             this.Name = "ServiciosFrm";
             this.Text = "ServiciosFrm";
+            this.Load += new System.EventHandler(this.ServiciosFrm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gruTipoServ.ResumeLayout(false);
+            this.gruTipoServ.PerformLayout();
+            this.gruActivo.ResumeLayout(false);
+            this.gruActivo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -277,10 +317,6 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtipoSer;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtActivo;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTiempoEst;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPrecioS;
@@ -294,5 +330,11 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.GroupBox gruTipoServ;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox gruActivo;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
     }
 }
