@@ -86,10 +86,11 @@
             // 
             // txtFechaI
             // 
+            this.txtFechaI.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFechaI.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtFechaI.Location = new System.Drawing.Point(22, 180);
+            this.txtFechaI.Location = new System.Drawing.Point(19, 176);
             this.txtFechaI.Name = "txtFechaI";
-            this.txtFechaI.Size = new System.Drawing.Size(200, 20);
+            this.txtFechaI.Size = new System.Drawing.Size(221, 24);
             this.txtFechaI.TabIndex = 17;
             // 
             // btnEliminar
@@ -127,6 +128,7 @@
             // 
             // txtEspecialidades
             // 
+            this.txtEspecialidades.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEspecialidades.FormattingEnabled = true;
             this.txtEspecialidades.Items.AddRange(new object[] {
             "Mecánica General",
@@ -139,18 +141,19 @@
             "Híbridos y Eléctricos(EV/HEV)",
             "Rectificado de Motores",
             "Alineación y Balanceo"});
-            this.txtEspecialidades.Location = new System.Drawing.Point(22, 280);
+            this.txtEspecialidades.Location = new System.Drawing.Point(15, 306);
             this.txtEspecialidades.Name = "txtEspecialidades";
-            this.txtEspecialidades.Size = new System.Drawing.Size(193, 21);
+            this.txtEspecialidades.Size = new System.Drawing.Size(228, 24);
             this.txtEspecialidades.TabIndex = 13;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.radioButtonInactivo);
             this.groupBox1.Controls.Add(this.radioButtonActivo);
-            this.groupBox1.Location = new System.Drawing.Point(15, 205);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(19, 218);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 55);
+            this.groupBox1.Size = new System.Drawing.Size(221, 55);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estado";
@@ -158,9 +161,9 @@
             // radioButtonInactivo
             // 
             this.radioButtonInactivo.AutoSize = true;
-            this.radioButtonInactivo.Location = new System.Drawing.Point(85, 20);
+            this.radioButtonInactivo.Location = new System.Drawing.Point(137, 20);
             this.radioButtonInactivo.Name = "radioButtonInactivo";
-            this.radioButtonInactivo.Size = new System.Drawing.Size(63, 17);
+            this.radioButtonInactivo.Size = new System.Drawing.Size(69, 20);
             this.radioButtonInactivo.TabIndex = 1;
             this.radioButtonInactivo.TabStop = true;
             this.radioButtonInactivo.Text = "Inactivo";
@@ -172,7 +175,7 @@
             this.radioButtonActivo.Checked = true;
             this.radioButtonActivo.Location = new System.Drawing.Point(24, 20);
             this.radioButtonActivo.Name = "radioButtonActivo";
-            this.radioButtonActivo.Size = new System.Drawing.Size(55, 17);
+            this.radioButtonActivo.Size = new System.Drawing.Size(60, 20);
             this.radioButtonActivo.TabIndex = 0;
             this.radioButtonActivo.TabStop = true;
             this.radioButtonActivo.Text = "Activo";
@@ -180,67 +183,75 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(19, 140);
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(19, 130);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(196, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(224, 24);
             this.txtTelefono.TabIndex = 8;
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(19, 99);
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Location = new System.Drawing.Point(19, 84);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(196, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(224, 24);
             this.txtApellidos.TabIndex = 7;
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(19, 49);
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.Location = new System.Drawing.Point(19, 38);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(196, 20);
+            this.txtNombres.Size = new System.Drawing.Size(224, 24);
             this.txtNombres.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 263);
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 276);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 13);
+            this.label6.Size = new System.Drawing.Size(93, 16);
             this.label6.TabIndex = 5;
             this.label6.Text = "Especialidades";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 163);
+            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(22, 157);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.Size = new System.Drawing.Size(107, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Fecha de Ingreso";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 121);
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefono";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 83);
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Apellidos";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 32);
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombres";
             // 

@@ -81,38 +81,43 @@
             // 
             // txtMecanico
             // 
+            this.txtMecanico.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMecanico.Location = new System.Drawing.Point(38, 325);
             this.txtMecanico.Name = "txtMecanico";
-            this.txtMecanico.Size = new System.Drawing.Size(143, 20);
+            this.txtMecanico.Size = new System.Drawing.Size(143, 24);
             this.txtMecanico.TabIndex = 34;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(35, 308);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 33;
             this.label4.Text = "Mecanico";
             // 
             // txtOrden
             // 
+            this.txtOrden.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOrden.Location = new System.Drawing.Point(34, 264);
             this.txtOrden.Name = "txtOrden";
-            this.txtOrden.Size = new System.Drawing.Size(143, 20);
+            this.txtOrden.Size = new System.Drawing.Size(143, 24);
             this.txtOrden.TabIndex = 30;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(31, 247);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 29;
             this.label3.Text = "Orden";
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(93, 410);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
@@ -123,6 +128,7 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(145, 371);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
@@ -133,6 +139,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(38, 371);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
@@ -143,6 +150,7 @@
             // 
             // txtHoras
             // 
+            this.txtHoras.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoras.Location = new System.Drawing.Point(30, 185);
             this.txtHoras.Multiline = true;
             this.txtHoras.Name = "txtHoras";
@@ -152,43 +160,48 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(27, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.Size = new System.Drawing.Size(107, 16);
             this.label2.TabIndex = 28;
             this.label2.Text = "Horas de trabajo";
             // 
             // txtFechaF
             // 
+            this.txtFechaF.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFechaF.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtFechaF.Location = new System.Drawing.Point(34, 110);
             this.txtFechaF.Name = "txtFechaF";
-            this.txtFechaF.Size = new System.Drawing.Size(100, 20);
+            this.txtFechaF.Size = new System.Drawing.Size(100, 24);
             this.txtFechaF.TabIndex = 27;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(35, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 26;
             this.label1.Text = "fecha de fin";
             // 
             // txtFechaI
             // 
+            this.txtFechaI.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFechaI.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtFechaI.Location = new System.Drawing.Point(30, 57);
             this.txtFechaI.Name = "txtFechaI";
-            this.txtFechaI.Size = new System.Drawing.Size(100, 20);
+            this.txtFechaI.Size = new System.Drawing.Size(100, 24);
             this.txtFechaI.TabIndex = 25;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(31, 40);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 13);
+            this.label6.Size = new System.Drawing.Size(93, 16);
             this.label6.TabIndex = 24;
             this.label6.Text = "Fecha de inicio\r\n";
             // 
@@ -201,8 +214,10 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(530, 450);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Mecanico_ordenFrm
             // 

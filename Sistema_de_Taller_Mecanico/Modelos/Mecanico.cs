@@ -59,7 +59,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             }
             finally
             {
-                cnn.Desconectar();
+                cnn.Desconectar();                                                                                                                           
             }
         }
         private void editar(int id, string nombres, string apellidos, string telefono, string fecha_ingreso, string estado, string especialidades)
