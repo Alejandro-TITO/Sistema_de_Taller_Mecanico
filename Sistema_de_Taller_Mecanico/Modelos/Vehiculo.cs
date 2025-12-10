@@ -35,7 +35,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             }
         }
 
-        public static bool Crear(string placa, string modelo, string anio, string tipo_motor, string kilometraje, string fecha_registro, int id_cliente, string marca_id)
+        public static bool Crear(string placa, string modelo, string anio, string tipo_motor, string kilometraje, string fecha_registro, int id_cliente, int marca_id)
         {
             Conexion cnn = new Conexion();
             try
