@@ -75,7 +75,7 @@ namespace Sistema_de_Taller_Mecanico
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            ServiciosFrm frm = new ServiciosFrm();
+            Servicio_ordenFrm frm = new Servicio_ordenFrm();
             frm.MdiParent = this;
             frm.Show();
         }

@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtGarantia = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtEstadoR = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtCostoC = new System.Windows.Forms.TextBox();
             this.txtxSolucionA = new System.Windows.Forms.TextBox();
             this.txtDescripcionP = new System.Windows.Forms.TextBox();
-            this.txtFechaR = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,8 +43,10 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtGarantia = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.txtFechaReclamo = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -63,13 +63,13 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtFechaReclamo);
             this.splitContainer1.Panel1.Controls.Add(this.txtGarantia);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.txtEstadoR);
             this.splitContainer1.Panel1.Controls.Add(this.txtCostoC);
             this.splitContainer1.Panel1.Controls.Add(this.txtxSolucionA);
             this.splitContainer1.Panel1.Controls.Add(this.txtDescripcionP);
-            this.splitContainer1.Panel1.Controls.Add(this.txtFechaR);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
@@ -85,11 +85,29 @@
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
             // 
+            // txtGarantia
+            // 
+            this.txtGarantia.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGarantia.Location = new System.Drawing.Point(21, 384);
+            this.txtGarantia.Name = "txtGarantia";
+            this.txtGarantia.Size = new System.Drawing.Size(216, 24);
+            this.txtGarantia.TabIndex = 30;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 367);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Garantia";
+            // 
             // txtEstadoR
             // 
-            this.txtEstadoR.Controls.Add(this.checkBox3);
-            this.txtEstadoR.Controls.Add(this.checkBox2);
-            this.txtEstadoR.Controls.Add(this.checkBox1);
+            this.txtEstadoR.Controls.Add(this.radioButton3);
+            this.txtEstadoR.Controls.Add(this.radioButton2);
+            this.txtEstadoR.Controls.Add(this.radioButton1);
             this.txtEstadoR.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstadoR.Location = new System.Drawing.Point(14, 260);
             this.txtEstadoR.Name = "txtEstadoR";
@@ -97,36 +115,6 @@
             this.txtEstadoR.TabIndex = 21;
             this.txtEstadoR.TabStop = false;
             this.txtEstadoR.Text = "Estado del Reclamo";
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(15, 67);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(42, 20);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Fin";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(93, 29);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(73, 20);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Proceso";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 29);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 20);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Inicio";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // txtCostoC
             // 
@@ -151,14 +139,6 @@
             this.txtDescripcionP.Name = "txtDescripcionP";
             this.txtDescripcionP.Size = new System.Drawing.Size(223, 24);
             this.txtDescripcionP.TabIndex = 18;
-            // 
-            // txtFechaR
-            // 
-            this.txtFechaR.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaR.Location = new System.Drawing.Point(14, 63);
-            this.txtFechaR.Name = "txtFechaR";
-            this.txtFechaR.Size = new System.Drawing.Size(223, 24);
-            this.txtFechaR.TabIndex = 17;
             // 
             // label4
             // 
@@ -209,6 +189,7 @@
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -219,6 +200,7 @@
             this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -229,6 +211,7 @@
             this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dataGridView1
             // 
@@ -242,23 +225,46 @@
             this.dataGridView1.Size = new System.Drawing.Size(530, 531);
             this.dataGridView1.TabIndex = 0;
             // 
-            // txtGarantia
+            // radioButton1
             // 
-            this.txtGarantia.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGarantia.Location = new System.Drawing.Point(21, 384);
-            this.txtGarantia.Name = "txtGarantia";
-            this.txtGarantia.Size = new System.Drawing.Size(216, 24);
-            this.txtGarantia.TabIndex = 30;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 24);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(73, 20);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "En inicio";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // radioButton2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 367);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Garantia";
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(113, 24);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(91, 20);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "En proceso";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(61, 61);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(83, 20);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Finalizado";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // txtFechaReclamo
+            // 
+            this.txtFechaReclamo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFechaReclamo.Location = new System.Drawing.Point(29, 54);
+            this.txtFechaReclamo.Name = "txtFechaReclamo";
+            this.txtFechaReclamo.Size = new System.Drawing.Size(87, 20);
+            this.txtFechaReclamo.TabIndex = 31;
             // 
             // Reclamo_GarantiaFrm
             // 
@@ -268,6 +274,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Reclamo_GarantiaFrm";
             this.Text = "Reclamo_GarantiaFrm";
+            this.Load += new System.EventHandler(this.Reclamo_GarantiaFrm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -287,7 +294,6 @@
         private System.Windows.Forms.TextBox txtCostoC;
         private System.Windows.Forms.TextBox txtxSolucionA;
         private System.Windows.Forms.TextBox txtDescripcionP;
-        private System.Windows.Forms.TextBox txtFechaR;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -296,10 +302,11 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox txtEstadoR;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox txtGarantia;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DateTimePicker txtFechaReclamo;
     }
 }
