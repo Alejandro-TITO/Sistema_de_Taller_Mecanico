@@ -18,7 +18,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             try
             {
                 cnn.Conectar();
-                String consulta = "SELECT * FROM ordenes order by id desc";
+                String consulta = "SELECT o.*, v.placa FROM ordenes o inner join vehiculos v on o.id_vehiculo = v.id order by id desc";
                 SqlCommand comando = new SqlCommand(consulta, cnn.ObtenerConexion());
                 SqlDataAdapter adaptador = new SqlDataAdapter(comando);
                 DataTable dt = new DataTable();
@@ -37,7 +37,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
         }
 
         // Crear un nuevo registro en la tabla Ordenes
-        public static bool Crear(string numero_orden, string fecha_ingreso, string diagnostico_inicial, string observacion_cliente, string estado, string mano_obra, string total_repuestos, string precio_estimado, string fecha_entrega, string id_vehiculo)
+        public static bool Crear(string numero_orden, string fecha_ingreso, string diagnostico_inicial, string observacion_cliente, string estado, string mano_obra, string total_repuestos, string precio_estimado, string fecha_entrega, int id_vehiculo)
         {
             Conexion cnn = new Conexion();
             try
@@ -72,7 +72,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
         }
 
         // Editar un registro existente en la tabla Ordenes
-        public static bool Editar(int id, string numero_orden, string fecha_ingreso, string diagnostico_inicial, string observacion_cliente, string estado, string mano_obra, string total_repuestos, string precio_estimado, string fecha_entrega, string id_vehiculo)
+        public static bool Editar(int id, string numero_orden, string fecha_ingreso, string diagnostico_inicial, string observacion_cliente, string estado, string mano_obra, string total_repuestos, string precio_estimado, string fecha_entrega, int id_vehiculo)
         {
             Conexion cnn = new Conexion();
             try

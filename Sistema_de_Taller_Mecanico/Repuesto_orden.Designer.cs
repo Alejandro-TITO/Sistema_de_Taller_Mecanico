@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtRepuesto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtOrden = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPrecioT = new System.Windows.Forms.TextBox();
             this.txtPrecioU = new System.Windows.Forms.TextBox();
@@ -43,6 +41,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -58,9 +58,9 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.txtRepuesto);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox2);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
-            this.splitContainer1.Panel1.Controls.Add(this.txtOrden);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.txtPrecioT);
             this.splitContainer1.Panel1.Controls.Add(this.txtPrecioU);
@@ -79,14 +79,6 @@
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
             // 
-            // txtRepuesto
-            // 
-            this.txtRepuesto.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRepuesto.Location = new System.Drawing.Point(24, 302);
-            this.txtRepuesto.Name = "txtRepuesto";
-            this.txtRepuesto.Size = new System.Drawing.Size(224, 24);
-            this.txtRepuesto.TabIndex = 32;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -96,14 +88,6 @@
             this.label5.Size = new System.Drawing.Size(62, 16);
             this.label5.TabIndex = 31;
             this.label5.Text = "Repuesto";
-            // 
-            // txtOrden
-            // 
-            this.txtOrden.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrden.Location = new System.Drawing.Point(24, 246);
-            this.txtOrden.Name = "txtOrden";
-            this.txtOrden.Size = new System.Drawing.Size(224, 24);
-            this.txtOrden.TabIndex = 30;
             // 
             // label4
             // 
@@ -214,6 +198,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(530, 450);
             this.dataGridView1.TabIndex = 0;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(24, 246);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(171, 21);
+            this.comboBox1.TabIndex = 32;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(24, 302);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(171, 21);
+            this.comboBox2.TabIndex = 33;
+            // 
             // Repuesto_orden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,9 +248,9 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtRepuesto;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtOrden;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

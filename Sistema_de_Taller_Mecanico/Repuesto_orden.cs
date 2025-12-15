@@ -23,8 +23,10 @@ namespace Sistema_de_Taller_Mecanico
             string cantidad = txtCantidad.Text;
             string precio_unitario = txtPrecioU.Text;
             string precio_total = txtPrecioT.Text;
-            string orden = txtOrden.Text;
-            string repuesto = txtRepuesto.Text;
+            //string orden = txtOrden.Text;
+            int orden = Convert.ToInt32(comboBox1.SelectedValue);
+            //string repuesto = txtRepuesto.Text;
+            int repuesto = Convert.ToInt32(comboBox2.SelectedValue);
             bool resultado = false;
             resultado = Modelos.Repuesto_Orden.Crear(cantidad, precio_unitario, precio_total, orden, repuesto);
             if (resultado)
@@ -42,8 +44,8 @@ namespace Sistema_de_Taller_Mecanico
             txtCantidad.Text = "";
             txtPrecioU.Text = "";
             txtPrecioT.Text = "";
-            txtOrden.Text = "";
-            txtRepuesto.Text = "";
+            //txtOrden.Text = "";
+            //txtRepuesto.Text = "";
             repuesto_orden_id = 0;
             txtCantidad.Focus();
         }
@@ -53,8 +55,10 @@ namespace Sistema_de_Taller_Mecanico
             txtCantidad.Text = dataGridView1.CurrentRow.Cells["cantidad"].Value.ToString();
             txtPrecioU.Text = dataGridView1.CurrentRow.Cells["precio_unitario"].Value.ToString();
             txtPrecioT.Text = dataGridView1.CurrentRow.Cells["precio_total"].Value.ToString();
-            txtOrden.Text = dataGridView1.CurrentRow.Cells["id_orden"].Value.ToString();
-            txtRepuesto.Text = dataGridView1.CurrentRow.Cells["id_repuesto"].Value.ToString();
+            //txtOrden.Text = dataGridView1.CurrentRow.Cells["id_orden"].Value.ToString();
+            comboBox1.SelectedValue = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id_orden"].Value);
+            //txtRepuesto.Text = dataGridView1.CurrentRow.Cells["id_repuesto"].Value.ToString();
+            comboBox2.SelectedValue = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id_repuesto"].Value);
             repuesto_orden_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
 
         }
@@ -77,6 +81,12 @@ namespace Sistema_de_Taller_Mecanico
         private void Repuesto_orden_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Modelos.Repuesto_Orden.Obtener();
+            comboBox1.DataSource = Modelos.Ordene.Obtener();
+            comboBox1.DisplayMember = "numero_orden";
+            comboBox1.ValueMember = "id";
+            comboBox2.DataSource = Modelos.Repuestos.Obtener();
+            comboBox2.DisplayMember = "nombre";
+            comboBox2.ValueMember = "id";
             if (dataGridView1.Columns.Count > 0)
             {
                 dataGridView1.Columns["id"].Visible = false;

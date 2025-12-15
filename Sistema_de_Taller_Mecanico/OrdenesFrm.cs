@@ -22,9 +22,13 @@ namespace Sistema_de_Taller_Mecanico
         private void OrdenesFrm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Ordene.Obtener();
+            comboBox1.DataSource = Vehiculo.Obtener();
+            comboBox1.DisplayMember = "placa";
+            comboBox1.ValueMember = "id_vehiculo";
             if (dataGridView1.Columns.Count > 0)
             {
                 dataGridView1.Columns["id"].Visible = false;
+                dataGridView1.Columns["id_vehiculo"].Visible = false;
             }
         }
 
@@ -39,7 +43,8 @@ namespace Sistema_de_Taller_Mecanico
             string total_repuestos = txtTotalR.Text;
             string precio_estimado = txtPrecioE.Text;
             string fecha_entrega = txtFechaE.Value.ToString("yyyy-MM-dd");
-            string id_vehiculo = txtVehiculo.Text;
+            //string id_vehiculo = txtVehiculo.Text;
+            int id_vehiculo = Convert.ToInt32(comboBox1.SelectedValue);
             bool resultado = false;
             if (orden_id == 0)
                 resultado = Ordene.Crear(numero_orden, fecha_ingreso, diagnostico_inicial, observacion_cliente, estado, mano_obra, total_repuestos, precio_estimado, fecha_entrega, id_vehiculo);
@@ -66,8 +71,8 @@ namespace Sistema_de_Taller_Mecanico
             txtEstado.Text = "";
             txtManoO.Text = "";
             txtTotalR.Text = "";
-            txtPrecioE.Text = "";
-            txtVehiculo.Text = "";
+            txtPrecioE.Text = "";    
+            
             orden_id = 0;
             txtNumeroO.Focus();
         }
@@ -83,7 +88,8 @@ namespace Sistema_de_Taller_Mecanico
             txtTotalR.Text = dataGridView1.CurrentRow.Cells["total_repuestos"].Value.ToString();
             txtPrecioE.Text = dataGridView1.CurrentRow.Cells["precio_estimado"].Value.ToString();
             txtFechaE.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["fecha_entrega"].Value.ToString());
-            txtVehiculo.Text = dataGridView1.CurrentRow.Cells["id_vehiculo"].Value.ToString();
+            //txtVehiculo.Text = dataGridView1.CurrentRow.Cells["id_vehiculo"].Value.ToString();
+            comboBox1.SelectedValue = dataGridView1.CurrentRow.Cells["id_vehiculo"].Value.ToString();
             orden_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
         }
 

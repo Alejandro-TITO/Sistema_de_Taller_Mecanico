@@ -21,16 +21,26 @@ namespace Sistema_de_Taller_Mecanico
         private void Mecanico_ordenFrm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Mecanico_Orden.Obtener();
+            comboBox1.DataSource = Modelos.Ordene.Obtener();
+            comboBox1.DisplayMember = "numero_orden";
+            comboBox1.ValueMember = "id";
+            comboBox2.DataSource = Modelos.Mecanico.Obtener();
+            comboBox2.DisplayMember = "nombres";
+            comboBox2.ValueMember = "id";
             if (dataGridView1.Columns.Count > 0)
             {
                 dataGridView1.Columns["id"].Visible = false;
+                dataGridView1.Columns["id_mecanico"].Visible = false;
+                dataGridView1.Columns["id_orden"].Visible = false;
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string id_mecanico = txtMecanico.Text;
-            string id_orden = txtOrden.Text;
+            //string id_mecanico = txtMecanico.Text;
+            int id_orden = Convert.ToInt32(comboBox1.SelectedValue);
+            //string id_orden = txtOrden.Text;
+            int id_mecanico = Convert.ToInt32(comboBox2.SelectedValue);
             string fecha_inicio = txtFechaI.Value.ToString("yyyy-MM-dd");
             string fecha_fin = txtFechaF.Value.ToString("yyyy-MM-dd");
             string horas_trabajo = txtHoras.Text;
@@ -43,8 +53,8 @@ namespace Sistema_de_Taller_Mecanico
         }
         private void limpiarCampos()
         {
-            txtMecanico.Text = "";
-            txtOrden.Text = "";
+            //txtMecanico.Text = "";
+            //txtOrden.Text = "";
             txtHoras.Text = "";
             mecanico_orden_id = 0;
             txtHoras.Focus();
@@ -55,8 +65,10 @@ namespace Sistema_de_Taller_Mecanico
             txtFechaI.Value = DateTime.Parse(dataGridView1.CurrentRow.Cells["fecha_inicio"].Value.ToString());
             txtFechaF.Value = DateTime.Parse(dataGridView1.CurrentRow.Cells["fecha_fin"].Value.ToString());
             txtHoras.Text = dataGridView1.CurrentRow.Cells["horas_trabajo"].Value.ToString();
-            txtOrden.Text = dataGridView1.CurrentRow.Cells["id_orden"].Value.ToString();
-            txtMecanico.Text = dataGridView1.CurrentRow.Cells["id_mecanico"].Value.ToString();
+            //txtOrden.Text = dataGridView1.CurrentRow.Cells["id_orden"].Value.ToString();
+            comboBox1.SelectedValue = dataGridView1.CurrentRow.Cells["id_orden"].Value.ToString();
+            //txtMecanico.Text = dataGridView1.CurrentRow.Cells["id_mecanico"].Value.ToString();
+            comboBox2.SelectedValue = dataGridView1.CurrentRow.Cells["id_mecanico"].Value.ToString();
 
         }
 

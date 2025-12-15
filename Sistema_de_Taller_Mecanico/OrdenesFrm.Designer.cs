@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtVehiculo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtFechaI = new System.Windows.Forms.DateTimePicker();
             this.txtFechaE = new System.Windows.Forms.DateTimePicker();
@@ -53,6 +52,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -68,7 +68,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.txtVehiculo);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel1.Controls.Add(this.label10);
             this.splitContainer1.Panel1.Controls.Add(this.txtFechaI);
             this.splitContainer1.Panel1.Controls.Add(this.txtFechaE);
@@ -96,15 +96,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Size = new System.Drawing.Size(1314, 588);
-            this.splitContainer1.SplitterDistance = 255;
+            this.splitContainer1.SplitterDistance = 254;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // txtVehiculo
-            // 
-            this.txtVehiculo.Location = new System.Drawing.Point(27, 429);
-            this.txtVehiculo.Name = "txtVehiculo";
-            this.txtVehiculo.Size = new System.Drawing.Size(143, 20);
-            this.txtVehiculo.TabIndex = 35;
             // 
             // label10
             // 
@@ -303,8 +296,17 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1055, 588);
+            this.dataGridView1.Size = new System.Drawing.Size(1056, 588);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(27, 428);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 21);
+            this.comboBox1.TabIndex = 35;
             // 
             // OrdenesFrm
             // 
@@ -350,7 +352,7 @@
         private System.Windows.Forms.TextBox txtObservacionC;
         private System.Windows.Forms.TextBox txtDiagnosticoI;
         private System.Windows.Forms.TextBox txtNumeroO;
-        private System.Windows.Forms.TextBox txtVehiculo;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

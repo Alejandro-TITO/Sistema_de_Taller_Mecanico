@@ -31,7 +31,8 @@ namespace Sistema_de_Taller_Mecanico
             txtDescripcion.Text = dataGridView1.CurrentRow.Cells["descripcion"].Value.ToString();
             txtStock.Text = dataGridView1.CurrentRow.Cells["stock"].Value.ToString();
             txtPrecio.Text = dataGridView1.CurrentRow.Cells["precio"].Value.ToString();
-            txtMarca.Text = dataGridView1.CurrentRow.Cells["marca_id"].Value.ToString();
+            //txtMarca.Text = dataGridView1.CurrentRow.Cells["marca_id"].Value.ToString();
+            comboBox1.SelectedValue = dataGridView1.CurrentRow.Cells["marca_id"].Value.ToString();
             repuesto_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
         }
 
@@ -42,7 +43,8 @@ namespace Sistema_de_Taller_Mecanico
             string descripcion = txtDescripcion.Text;
             string stock = txtStock.Text;
             string precio = txtPrecio.Text;
-            string marca_id = txtMarca.Text;
+            //string marca_id = txtMarca.Text;
+            int marca_id = Convert.ToInt32(comboBox1.SelectedValue);
             bool resultado = false;
             if (repuesto_id == 0)
                 resultado = Repuestos.Crear(codigo, nombre, descripcion, stock, precio, marca_id);
@@ -68,16 +70,20 @@ namespace Sistema_de_Taller_Mecanico
             txtDescripcion.Text = "";
             txtStock.Text = "";
             txtPrecio.Text = "";
-            txtMarca.Text = "";
+            //txtMarca.Text = "";
             repuesto_id = 0;
             txtCodigo.Focus();
         }
         private void RepuestosFrm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Repuestos.Obtener();
+            comboBox1.DataSource = Marcas.Obtener();
+            comboBox1.DisplayMember = "marca";
+            comboBox1.ValueMember = "id";
             if (dataGridView1.Columns.Count > 0)
             {
                 dataGridView1.Columns["id"].Visible = false;
+                dataGridView1.Columns["marca_id"].Visible = false;
             }
         }
 

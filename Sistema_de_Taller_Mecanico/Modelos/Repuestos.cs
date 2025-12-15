@@ -17,7 +17,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             try
             {
                 cnn.Conectar();
-                String consulta = "SELECT * FROM repuestos order by id desc";
+                String consulta = "SELECT r.*, m.marcas FROM repuestos r inner join marcas m on r.marcas_id = m.id order by id desc";
                 SqlCommand comando = new SqlCommand(consulta, cnn.ObtenerConexion());
                 SqlDataAdapter adaptador = new SqlDataAdapter(comando);
                 DataTable dt = new DataTable();
@@ -35,7 +35,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             }
         }
 
-        public static bool Crear(string codigo, string nombre, string descripcion,string stock, string precio, string marca_id)
+        public static bool Crear(string codigo, string nombre, string descripcion,string stock, string precio, int marca_id)
         {
             Conexion cnn = new Conexion();
             try
@@ -64,7 +64,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             }
         }
 
-        public static bool Editar(int id, string codigo, string nombre, string descripcion, string stock, string precio, string marca_id)
+        public static bool Editar(int id, string codigo, string nombre, string descripcion, string stock, string precio, int marca_id)
         {
             Conexion cnn = new Conexion();
             try

@@ -22,10 +22,14 @@ namespace Sistema_de_Taller_Mecanico
         private void Reclamo_GarantiaFrm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Modelos.Reclamo_Garantia.Obtener();
+            comboBox1.DataSource = Modelos.Garantia.Obtener();
+            comboBox1.DisplayMember = "descripcion";
+            comboBox1.ValueMember = "id";
 
             if (dataGridView1.Columns.Count > 0)
             {
                 dataGridView1.Columns["id"].Visible = false;
+                dataGridView1.Columns["id_garantia"].Visible = false;
             }
         }
 
@@ -48,7 +52,8 @@ namespace Sistema_de_Taller_Mecanico
             {
                 Estado_reclamo = "Finalizado";
             }
-            string id_garantia = txtGarantia.Text;
+            //string id_garantia = txtGarantia.Text;
+            int id_garantia = Convert.ToInt32(comboBox1.SelectedValue);
             bool resultado = false;
             if (reclamoGarantia_id == 0)
             {
@@ -74,7 +79,6 @@ namespace Sistema_de_Taller_Mecanico
             txtxSolucionA.Text = "";
             txtCostoC.Text = "";
             txtEstadoR.Text = "";
-            txtGarantia.Text = "";
             reclamoGarantia_id = 0;
             txtDescripcionP.Focus();
         }
@@ -98,7 +102,8 @@ namespace Sistema_de_Taller_Mecanico
             {
                 radioButton3.Checked = true;
             }
-            txtGarantia.Text = dataGridView1.CurrentRow.Cells["id_garantia"].Value.ToString();
+            //txtGarantia.Text = dataGridView1.CurrentRow.Cells["id_garantia"].Value.ToString();
+            comboBox1.SelectedValue = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id_garantia"].Value);
             reclamoGarantia_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
         }
 

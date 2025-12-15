@@ -17,7 +17,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             try
             {
                 cnn.Conectar();
-                String consulta = "SELECT * FROM Reclamo_Garantia order by id desc";
+                String consulta = "SELECT rg.*, g.meses FROM Reclamo_Garantia rg inner join garantias g on rg.id_garantia= g.id order by id desc";
                 SqlCommand comando = new SqlCommand(consulta, cnn.ObtenerConexion());
                 SqlDataAdapter adaptador = new SqlDataAdapter(comando);
                 DataTable dt = new DataTable();
@@ -35,7 +35,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             }
         }
 
-        public static bool Crear(string fecha_reclamo, string descripcion_problema, string solucion_aplicada,string costo_cubierto,string estado_reclamo, string id_garantia)
+        public static bool Crear(string fecha_reclamo, string descripcion_problema, string solucion_aplicada,string costo_cubierto,string estado_reclamo, int id_garantia)
         {
             Conexion cnn = new Conexion();
             try
@@ -65,7 +65,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             }
         }
         public static bool Editar(int id, string fecha_reclamo, string descripcion_problema, string solucion_aplicada,
-            string costo_cubierto, string estado_reclamo, string id_garantia)
+            string costo_cubierto, string estado_reclamo, int id_garantia)
         {
            Conexion cnn = new Conexion();
             try

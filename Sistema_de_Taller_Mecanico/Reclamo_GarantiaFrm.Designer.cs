@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtGarantia = new System.Windows.Forms.TextBox();
+            this.txtFechaReclamo = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEstadoR = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtCostoC = new System.Windows.Forms.TextBox();
             this.txtxSolucionA = new System.Windows.Forms.TextBox();
             this.txtDescripcionP = new System.Windows.Forms.TextBox();
@@ -43,10 +46,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.txtFechaReclamo = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -63,8 +63,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel1.Controls.Add(this.txtFechaReclamo);
-            this.splitContainer1.Panel1.Controls.Add(this.txtGarantia);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.txtEstadoR);
             this.splitContainer1.Panel1.Controls.Add(this.txtCostoC);
@@ -85,13 +85,13 @@
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
             // 
-            // txtGarantia
+            // txtFechaReclamo
             // 
-            this.txtGarantia.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGarantia.Location = new System.Drawing.Point(21, 384);
-            this.txtGarantia.Name = "txtGarantia";
-            this.txtGarantia.Size = new System.Drawing.Size(216, 24);
-            this.txtGarantia.TabIndex = 30;
+            this.txtFechaReclamo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFechaReclamo.Location = new System.Drawing.Point(29, 54);
+            this.txtFechaReclamo.Name = "txtFechaReclamo";
+            this.txtFechaReclamo.Size = new System.Drawing.Size(87, 20);
+            this.txtFechaReclamo.TabIndex = 31;
             // 
             // label5
             // 
@@ -115,6 +115,39 @@
             this.txtEstadoR.TabIndex = 21;
             this.txtEstadoR.TabStop = false;
             this.txtEstadoR.Text = "Estado del Reclamo";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(61, 61);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(83, 20);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Finalizado";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(113, 24);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(91, 20);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "En proceso";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 24);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(73, 20);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "En inicio";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // txtCostoC
             // 
@@ -225,46 +258,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(530, 531);
             this.dataGridView1.TabIndex = 0;
             // 
-            // radioButton1
+            // comboBox1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 24);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(73, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "En inicio";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(113, 24);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(91, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "En proceso";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(61, 61);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(83, 20);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Finalizado";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // txtFechaReclamo
-            // 
-            this.txtFechaReclamo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtFechaReclamo.Location = new System.Drawing.Point(29, 54);
-            this.txtFechaReclamo.Name = "txtFechaReclamo";
-            this.txtFechaReclamo.Size = new System.Drawing.Size(87, 20);
-            this.txtFechaReclamo.TabIndex = 31;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(21, 386);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(163, 21);
+            this.comboBox1.TabIndex = 32;
             // 
             // Reclamo_GarantiaFrm
             // 
@@ -302,11 +303,11 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox txtEstadoR;
-        private System.Windows.Forms.TextBox txtGarantia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.DateTimePicker txtFechaReclamo;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
